@@ -8,7 +8,8 @@ for (int i = 0; i < inputString.Length; i++)
 {
     if (inputString[i] == '#')
     {
-        stk.Pop();
+        if(stk.Count>0)
+            stk.Pop();
     }
     else
     {
@@ -16,14 +17,18 @@ for (int i = 0; i < inputString.Length; i++)
     }
 }
 
-PrintStringFromStack(stk);
+//PrintStringFromStack(stk);
 //while (stk.Count > 0)
 //{
 //    Console.Write(stk.Peek());
 //    stk.Pop();
 //}
+string text = new string (stk.ToArray());
+string reversedText = new string (text.Reverse().ToArray());
+Console.WriteLine(reversedText);
 
 
+//Done with recursion method
 void PrintStringFromStack(Stack<char> stk)
 {
     if (stk.Count == 0)
