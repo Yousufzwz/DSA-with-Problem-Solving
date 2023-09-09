@@ -1,5 +1,5 @@
 ﻿
-
+//Backspace problem solution
 
 string inputString = Console.ReadLine(); //mm#al#hmws##ud
 
